@@ -1,7 +1,7 @@
 {
   "name": "spotible",
   "author": "SPoket",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "longName": "An pebble app to control your Spotify playback",
   "keywords": ["pebble-app", "spotify"],
   "private": false,
