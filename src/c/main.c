@@ -23,7 +23,7 @@ static void click_config_provider(void *context) {
 }
 
 /**
- * Main window load - initialize all parent layers
+ * Main window load - initialize all child layers
  */
 static void window_load(Window *window) {
   s_icon_next = gbitmap_create_with_resource(RESOURCE_ID_ICON_MUSIC_SKIP_FORWARD);
@@ -40,7 +40,7 @@ static void window_load(Window *window) {
 }
 
 /**
- * Main window unload - destroy all parent layers
+ * Main window unload - destroy all child layers
  */
 static void window_unload(Window *window) {
   gbitmap_destroy(s_icon_next);
