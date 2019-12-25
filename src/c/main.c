@@ -1,11 +1,14 @@
 #include <pebble.h>
 
 static Window *s_window;
-static ActionBarLayer *s_action_bar;
 
 //=======================
 // Action bar configuring
 //=======================
+
+static ActionBarLayer *s_action_bar;
+static GBitmap *s_icon_next;
+static GBitmap *s_icon_prev;
 
 static void action_next_click_handler() {
 }
@@ -18,13 +21,27 @@ static void click_config_provider(void *context) {
   window_single_click_subscribe(BUTTON_ID_UP, (ClickHandler) action_previous_click_handler);
 }
 
+/**
+ * Main window load - initialize all parent layers
+ */
 static void window_load(Window *window) {
+  s_icon_next = gbitmap_create_with_resource(RESOURCE_ID_ICON_MUSIC_SKIP_FORWARD);
+  s_icon_prev = gbitmap_create_with_resource(RESOURCE_ID_ICON_MUSIC_SKIP_BACKWARD);
+
   s_action_bar = action_bar_layer_create();
   action_bar_layer_add_to_window(s_action_bar, window);
   action_bar_layer_set_click_config_provider(s_action_bar, click_config_provider);
+
+  action_bar_layer_set_icon(s_action_bar, BUTTON_ID_UP, s_icon_prev);
+  action_bar_layer_set_icon(s_action_bar, BUTTON_ID_DOWN, s_icon_next);
 }
 
+/**
+ * Main window unload - destroy all parent layers
+ */
 static void window_unload(Window *window) {
+  gbitmap_destroy(s_icon_next);
+  gbitmap_destroy(s_icon_prev);
   action_bar_layer_destroy(s_action_bar);
 }
 
