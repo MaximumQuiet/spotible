@@ -24,7 +24,38 @@
       "dummy"
     ],
     "resources": {
-      "media": []
+      "media": [
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_PAUSE",
+          "file":"icons/music_icon_pause.png"
+        },
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_PLAY",
+          "file":"icons/music_icon_play.png"
+        },
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_SKIP_BACKWARD",
+          "file":"icons/music_icon_skip_backward.png"
+        },
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_SKIP_FORWARD",
+          "file":"icons/music_icon_skip_forward.png"
+        },
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_VOLUME_DOWN",
+          "file":"icons/music_icon_volume_down.png"
+        },
+        {
+          "type":"raw",
+          "name":"ICON_MUSIC_VOLUME_UP",
+          "file":"icons/music_icon_volume_up.png"
+        }
+      ]
     }
   }
 }
