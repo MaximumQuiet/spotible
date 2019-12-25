@@ -1,0 +1,51 @@
+# Spotible
+A pebble app to control the Spotify playback on your smartphone and other
+devices, connected with Spotify Connect.
+
+## Getting started
+
+To build the project you will need a Pebble SDK, best way to get it - use
+docker image:
+```sh
+docker pull dmorgan81/rebble
+```
+After download, place [this](https://github.com/Spitemare/rebble-docker/blob/master/rebble.sh) shell script somewhere, and write it's path to PATH.
+
+Now you can use Pebble SDK command by `rebble.sh command`.
+
+### Build project
+To build Spotible use this command:
+
+```sh
+rebble.sh build
+```
+
+### Install on the phone
+Go to the Pebble app settings -> 'Developer Connection' -> Enable. Then, use
+this command with your settings:
+
+```sh
+rebble.sh install --phone ip_address_from_app
+```
+
+To enable logs:
+```sh
+rebble.sh install --logs --phone ip_address_from_app
+```
+
+## To Do
+
+* Pebble C side:
+  - [] previous, next, volume, liked buttons on action bar
+  - [] current song/album/artist info
+  - [] playlists
+  - [] song progress bar
+  - [] animations
+
+* Pebble JS side:
+  - [] getting info about current song
+  - [] sending actions with current song
+  - [] interacing with playlists
+
+* Android helper app:
+  - [] proxying interactions to Android Spotify SDK
