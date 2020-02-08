@@ -4,14 +4,36 @@ devices, connected with Spotify Connect.
 
 ## Getting started
 
-To build the project you will need a Pebble SDK, best way to get it - use
-docker image:
+To build the project you will need a Pebble SDK.
+
+### Docker image
+
 ```sh
 docker pull dmorgan81/rebble
 ```
 After download, place [this](https://github.com/Spitemare/rebble-docker/blob/master/rebble.sh) shell script somewhere, and write it's path to PATH.
 
 Now you can use Pebble SDK command by `rebble.sh command`.
+
+### Manual install
+
+Download [pebble-tool](https://github.com/pebble/pebble-tool/releases), unpack and
+place pebble executable to PATH.
+
+Now, install Python 2.7, create environment and install python requirements. (You should also
+replace pypkjs dependency, for example to this - https://github.com/gfunkmonk/pypkjs/archive/v1.1.2.tar.gz
+
+After, install Pebble SDK by command:
+
+```sh
+pebble sdk install url_of_pebble_sdk_package
+```
+
+And now, you can use pebble command:
+
+```sh
+pebble command
+```
 
 ### Build project
 To build Spotible use this command:
