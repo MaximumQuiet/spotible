@@ -43,8 +43,8 @@ static void window_load(Window *window) {
  * Main window unload - destroy all child layers
  */
 static void window_unload(Window *window) {
-  gbitmap_destroy(s_icon_next);
-  gbitmap_destroy(s_icon_next);
+  gbitmap_destroy(s_icon_next);
+  gbitmap_destroy(s_icon_pause);
   gbitmap_destroy(s_icon_prev);
 
   action_bar_layer_destroy(s_action_bar);
