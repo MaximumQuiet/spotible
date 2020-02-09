@@ -58,7 +58,7 @@
         {
             "type": "bitmap",
             "name":"ICON_OTHER",
-            "file":"icons/icon_other"
+            "file":"icons/icon_other.png"
         }
       ]
     }
