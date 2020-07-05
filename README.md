@@ -58,16 +58,16 @@ rebble.sh install --logs --phone ip_address_from_app
 ## To Do
 
 * Pebble C side:
-  - [ ] previous, next, volume, liked buttons on action bar
   - [ ] current song/album/artist info
-  - [ ] playlists
   - [ ] song progress bar
+  - [ ] current song action bar: previous, next, volume, like
+  - [ ] playlists window and action bar: play, shuffle, repeat
   - [ ] animations
 
 * Pebble JS side:
   - [ ] getting info about current song
-  - [ ] sending actions with current song
-  - [ ] interacing with playlists
+  - [ ] sending actions to Spotify: next, previous, like, dislike, volume
+  - [ ] getting info about playlists, sending actions to Spotify: play, shuffle, repeat
 
 * Android helper app:
   - [ ] proxying interactions to Android Spotify SDK
